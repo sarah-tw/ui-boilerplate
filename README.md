@@ -13,7 +13,10 @@ cd ui-boilerplate
 npm install
 httpserver
 ````
-When you see your app is started, go to http://0.0.0.0:8080 you can see a 'Hello world'
+
+If there is no httpserver command, use 'npm install -g httpserver' to install it.
+
+When you see your app is started, go to http://0.0.0.0:8080 you can see a 'Hello world', and then you can start development.
 
 ###Development
 open a new tab on terminal, go into ui-boilerplate folder
