@@ -1,6 +1,9 @@
 # ui-boilerplate
 This boilerplate is a pure front-end web project. Involved nodejs, npm, grunt, less, css, html.
 ##Installing prerequisites
+
+If you haven't install node or npm, please install them first.
+
 <ul>
 <li><a href="http://nodejs.org/">nodejs</a></li>
 <li><a href="http://git-scm.com/downloads">git</a></li>
