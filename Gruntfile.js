@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     
   grunt.initConfig({
     watch: {
-      files: ['**/*.less', 'index.html', 'javascripts/*.*'],
+      files: ['src/**/*.less', 'index.html', 'src/javascripts/*.*'],
       tasks: ['default'],
       options: {
         livereload: true
@@ -15,12 +15,23 @@ module.exports = function(grunt) {
     less: {
       all: {
         files: {
-          "stylesheets/main.css": "less/main.less"
+          "main.css": "src/less/main.less"
         }
       }
     },
-
-    // Make sure code styles are up to par and there are no obvious mistakes
+    webdriver: {
+      options: {
+          host: 'localhost',
+          port: 4444,
+          desiredCapabilities: {
+              browserName: 'firefox'
+          }
+      },
+      homepage: {
+          tests: ['./uitest/*.js']
+      }
+      // ...
+    },   // Make sure code styles are up to par and there are no obvious mistakes
     
   });
 
