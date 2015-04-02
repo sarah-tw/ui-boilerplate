@@ -2,10 +2,25 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>3 Pages in 3 days</title>
+  <title>To Do</title>
   <link rel="stylesheet" href="stylesheets/main.css">
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="javascripts/main.js"></script>
 </head>
 <body>
-	<h1>hello world</h1>
+	<div class="main">
+		<h1 class="time">16:12</h1>
+		<h2 class="welcome" id="welcome">Good afternoon <span id="name"></span> <input type="text" class="input-style" id="input-name"></h2>
+
+	</div>
+	<div class="my-todo">
+		<div class="todo-toggle">Todo</div>
+		<div class="todo-modal">
+			<h3> <span class="todo-count">0</span> things to do</h3>
+			<ul class="todos"></ul>
+			<input type="text" class="add-todo input-style" placeholder="New todo">
+		</div>
+	</div>
+
 </body>
 </html>

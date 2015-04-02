@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     
   grunt.initConfig({
     watch: {
-      files: ['**/*.less', 'index.html'],
+      files: ['**/*.less', 'index.html', 'javascripts/*.*'],
       tasks: ['default'],
       options: {
         livereload: true
