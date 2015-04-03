@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     watch: {
-      files: ['assets/**/*.less', 'index.html', 'assets/javascripts/*.*'],
+      files: ['src/**/*.less', 'index.html', 'src/javascripts/*.*'],
       tasks: ['default'],
       options: {
         livereload: true
@@ -24,21 +24,21 @@ module.exports = function(grunt) {
       assets: {
         files: [{
           expand: true,
-          cwd: 'assets/less',
+          cwd: 'src/less',
           src: '*.less',
           dest: 'build/stylesheets/less/'
         },
         {
           expand: true,
-          cwd: 'assets/images',
+          cwd: 'src/images',
           src: '*.*',
           dest: 'build/images/'
         },
         {
           expand: true,
-          cwd: 'assets/fonts',
+          cwd: 'src/fonts',
           src: '*.*',
-          dest: 'build/images/'
+          dest: 'build/fonts/'
         }
         ]
       }
@@ -50,11 +50,11 @@ module.exports = function(grunt) {
             sourceMap: true,
             sourceMapFilename: 'build/stylesheets/main.css.map',
             sourceMapURL: 'main.css.map',
-            sourceMapBasepath: 'assets/less',
+            sourceMapBasepath: 'src/less',
             sourceMapRootpath: '/build/stylesheets/less',
         },
         files: {
-          "build/stylesheets/main.css": "assets/less/main.less"
+          "build/stylesheets/main.css": "src/less/main.less"
         }
       }
     },
@@ -64,7 +64,7 @@ module.exports = function(grunt) {
             sourceMap: true,
           },
           files: {
-            'build/javascripts/main.min.js': ['bower_components/jquery/dist/jquery.min.js', 'assets/**/*.js']
+            'build/javascripts/main.min.js': ['bower_components/jquery/dist/jquery.min.js', 'src/**/*.js']
           }
       }
     },
