@@ -92,6 +92,12 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.registerTask('preCompile', [
+    'clean',
+    'uglify',
+    'copy',
+    'less'
+  ]);
 
   grunt.registerTask('default', [
     'clean',

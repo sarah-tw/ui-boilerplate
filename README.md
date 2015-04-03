@@ -28,3 +28,9 @@ run
 grunt watch
 ```
 This will watch your index.html and mian.less file, if anything changed, it will re-compile main.less to stylesheet/main.css, refresh your page you will see the changes.
+
+###Test
+Use follow command to run mocha test
+```
+grunt mocha
+```
