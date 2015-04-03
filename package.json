@@ -11,8 +11,7 @@
     "grunt-webdriver": "~0.4.8",
     "webdrivercss": "~1.0.3",
     "grunt-contrib-connect": "",
-    "mocha": "2.2.1",
-    "chai": "2.2.0",
-    "grunt-mocha":"0.4.12"
+    "grunt-mocha": "0.4.12",
+    "chai": "2.2.0"
   }
 }
