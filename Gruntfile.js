@@ -34,6 +34,12 @@ module.exports = function(grunt) {
           src: '*.*',
           dest: 'build/images/'
         },
+        {
+          expand: true,
+          cwd: 'assets/fonts',
+          src: '*.*',
+          dest: 'build/images/'
+        }
         ]
       }
     },
@@ -41,13 +47,11 @@ module.exports = function(grunt) {
     less: {
       all: {
         options: {
-            paths: ['../../bower_components/bootstrap/less'],
             sourceMap: true,
             sourceMapFilename: 'build/stylesheets/main.css.map',
             sourceMapURL: 'main.css.map',
-            sourceMapBasepath: 'build/stylesheets',
+            sourceMapBasepath: 'assets/less',
             sourceMapRootpath: '/build/stylesheets/less',
-            compress: true
         },        
         files: {
           "build/stylesheets/main.css": "assets/less/main.less"
@@ -56,27 +60,13 @@ module.exports = function(grunt) {
     },
     uglify: {
       my_target: {
+        sourceMap: true,
+        sourceMapName: 'build/javascripts/mainjs.map',
         files: {
           'build/javascript/main.min.js': ['assets/**/*.js']
         }
       }
     },
-    // compress: {
-    //     images: {
-    //         options: {'mode': 'gzip'},
-    //         expand: true,
-    //         cwd: 'assets/',
-    //         src: 'images/*.*',
-    //         dest: 'build/'
-    //     }
-    //     javascript: {
-    //         options: {'mode': 'gzip'},
-    //         expand: true,
-    //         cwd: "build/javascripts",
-    //         src: '../play-app/public/javascripts/*.js'//,
-    //     }
-    // },    
-
     webdriver: {
       options: {
           host: 'localhost',
@@ -104,6 +94,9 @@ module.exports = function(grunt) {
 
 
   grunt.registerTask('default', [
+    'clean',
+    'uglify',
+    'copy',
     'less'
   ]);
 };
