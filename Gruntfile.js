@@ -2,7 +2,7 @@ module.exports = function(grunt) {
   'use strict';
   // Equivalent to grunt.loadNpmTasks for each thing starting with grunt- in package.json
   require('load-grunt-tasks')(grunt);
-    
+
   grunt.initConfig({
     watch: {
       files: ['src/**/*.less', 'index.html', 'src/javascripts/*.*'],
@@ -32,7 +32,19 @@ module.exports = function(grunt) {
       }
       // ...
     },   // Make sure code styles are up to par and there are no obvious mistakes
-    
+
+    mocha: {
+      test: {
+        src: ['spec/test-runner.html'],
+        options: {
+          run: true,
+          log: true
+        },
+      }
+    }
+
+    // Make sure code styles are up to par and there are no obvious mistakes
+
   });
 
 
