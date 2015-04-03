@@ -93,7 +93,7 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('preCompile', [
+  grunt.registerTask('build', [
     'clean',
     'uglify',
     'copy',
