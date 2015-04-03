@@ -2,16 +2,15 @@
 
 var assert = require('assert');
 
-describe('Property details page test', function () {
+describe('Homepage test', function () {
 
-  it('Property details page should look the same', function (done) {
+  it('Homepage partial should look the same', function (done) {
     browser
       .url("http://127.0.0.1:8080")  //In default setup, you can reach your host through 10.0.2.2 from VM
       .webdrivercss('homepage', [
         {
           name: 'main',
-          elem: '.time'
-
+          elem: 'body'
         }
       ], function (err, res) {
         assert.ifError(err);

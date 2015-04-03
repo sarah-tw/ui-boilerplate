@@ -20,6 +20,7 @@ module.exports = function(grunt) {
             }
         }
     },
+
     copy: {
       assets: {
         files: [{
@@ -58,6 +59,7 @@ module.exports = function(grunt) {
         }
       }
     },
+
     uglify: {
       my_target: {
           options: {
@@ -68,6 +70,7 @@ module.exports = function(grunt) {
           }
       }
     },
+
     webdriver: {
       options: {
           host: 'localhost',
