@@ -19,7 +19,7 @@ module.exports = function(grunt) {
               force: true
             }
         }
-    },    
+    },
     copy: {
       assets: {
         files: [{
@@ -52,7 +52,7 @@ module.exports = function(grunt) {
             sourceMapURL: 'main.css.map',
             sourceMapBasepath: 'assets/less',
             sourceMapRootpath: '/build/stylesheets/less',
-        },        
+        },
         files: {
           "build/stylesheets/main.css": "assets/less/main.less"
         }
@@ -60,11 +60,12 @@ module.exports = function(grunt) {
     },
     uglify: {
       my_target: {
-        sourceMap: true,
-        sourceMapName: 'build/javascripts/mainjs.map',
-        files: {
-          'build/javascript/main.min.js': ['assets/**/*.js']
-        }
+          options: {
+            sourceMap: true,
+          },
+          files: {
+            'build/javascripts/main.min.js': ['bower_components/jquery/dist/jquery.min.js', 'assets/**/*.js']
+          }
       }
     },
     webdriver: {
