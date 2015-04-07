@@ -10,7 +10,7 @@ describe('Homepage test', function () {
       .webdrivercss('homepage', [
         {
           name: 'main',
-          elem: 'body'
+          elem: 'h1'
         }
       ], function (err, res) {
         assert.ifError(err);
